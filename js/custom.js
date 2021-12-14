@@ -1,14 +1,16 @@
 $(function () {  
   $(".gnb_wrap > ul > li").bind('mouseenter focusin', function(){
-    $(this).children(".div").stop().show();
-    $(this).addClass("active").siblings().removeClass("active");
+    $('.gnb_wrap >ul > li').removeClass("active");
+    $(this).children("div").stop().show();
+    $(this).addClass("active");
   });
   $(".gnb_wrap > ul > li").on('mouseleave', function(){
-    $(this).children(".div").stop().hide();
-    $(this).removeClass("active");
+    $('.gnb_wrap > ul > li').removeClass("active");
+    $(this).children("div").stop().hide();
   });
   $(".gnb_wrap > ul > li").on('focusout', function(){
-    $(this).children(".div").stop().fadeOut(300);
+    $('.gnb_wrap >ul >li').removeClass("active");
+    $(this).children("div").stop().hide(300);
   });  
 });
 
